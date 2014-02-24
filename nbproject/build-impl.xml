@@ -272,7 +272,8 @@ is divided into following sections:
                         </dirset>
                     </src>
                     <classpath>
-                        <path path="@{classpath}"/>
+                        <pathelement path="@{classpath}"/>
+                        <pathelement location="libs/junit.jar"/>
                     </classpath>
                     <compilerarg line="${endorsed.classpath.cmd.line.arg}"/>
                     <compilerarg line="${javac.compilerargs}"/>

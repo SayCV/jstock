@@ -247,10 +247,15 @@ set boolean_skip_checking_stamp_h=1
 
 echo SayCV_MXE: Checked Requirements Finished.
 
+if not exist %JAVA_HOME%/lib/junit.jar (
+	cp -rf %HOME%/libs/junit.jar %JAVA_HOME%/lib/junit.jar
+)
+
 set  CLASSPATH=%CLASSPATH%;%HOME%/libs
 echo %CLASSPATH%
 rem ant compile jar run
 ant >%HOME%/log-ant.log 2>&1
+
 
 REM ##############################
 REM End ...
