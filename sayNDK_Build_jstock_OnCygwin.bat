@@ -48,7 +48,7 @@ rem set JAVA SDK values will be used
 set /a USED_JAVA_VER_1D6=0
 set /a USED_JAVA_VER_1D7=1
 set /a USED_JAVA_VER_NONE=3
-set /a USED_JAVA_VER_FLAG=1
+set /a USED_JAVA_VER_FLAG=0
 
 set INSTALL_ENV_DIR_MINGW=D:/MinGW
 set INSTALL_ENV_DIR_CYGWIN=D:/cygwin
@@ -256,6 +256,7 @@ echo %CLASSPATH%
 rem ant compile jar run
 ant >%HOME%/log-ant.log 2>&1
 
+java -jar %HOME%/dist/jstock.jar
 
 REM ##############################
 REM End ...
